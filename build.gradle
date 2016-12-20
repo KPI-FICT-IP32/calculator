@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+repositories {
+   mavenCentral()
+}
+
+dependencies { }
+
+jar {
+   manifest {
+      attributes 'Main-Class': 'calc.Calc'
+   }
+}
