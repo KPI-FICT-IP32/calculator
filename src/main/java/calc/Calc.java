@@ -20,28 +20,28 @@ public class Calc extends JFrame implements ActionListener {
     int code;
     boolean point;
     double plus;
-    private JButton jButton10;
-    private JButton jButton11;
-    private JButton jButton12;
-    private JButton jButton13;
-    private JButton jButton14;
-    private JButton jButton15;
-    private JButton jButton16;
-    private JButton jButton17;
-    private JButton jButton18;
-    private JButton jButton19;
-    private JButton jButton20;
-    private JButton jButton21;
-    private JButton jButton22;
-    private JButton jButton23;
-    private JButton jButton24;
-    private JButton jButton25;
-    private JButton jButton26;
-    private JButton jButton29;
-    private JButton jButton7;
-    private JButton jButton8;
-    private JButton jButton9;
-    private JTextField jTextField1;
+    private JButton num0Button;
+    private JButton pointButton;
+    private JButton num2Button;
+    private JButton num3Button;
+    private JButton changeSignButton;
+    private JButton num5Button;
+    private JButton num6Button;
+    private JButton num8Button;
+    private JButton num9Button;
+    private JButton plusButton;
+    private JButton minusButton;
+    private JButton multiplyButton;
+    private JButton divideButton;
+    private JButton resultButton;
+    private JButton inverseButton;
+    private JButton percentButton;
+    private JButton sqrtButton;
+    private JButton resetButton;
+    private JButton num7Button;
+    private JButton num4Button;
+    private JButton num1Button;
+    private JTextField inputField;
 
     public Calc() {
         initComponents();
@@ -52,27 +52,27 @@ public class Calc extends JFrame implements ActionListener {
         str = "0";
         this.point = false;
 
-        this.jButton7.addActionListener(this);
-        this.jButton8.addActionListener(this);
-        this.jButton9.addActionListener(this);
-        this.jButton10.addActionListener(this);
-        this.jButton11.addActionListener(this);
-        this.jButton12.addActionListener(this);
-        this.jButton13.addActionListener(this);
-        this.jButton14.addActionListener(this);
-        this.jButton15.addActionListener(this);
-        this.jButton16.addActionListener(this);
-        this.jButton17.addActionListener(this);
-        this.jButton18.addActionListener(this);
-        this.jButton19.addActionListener(this);
-        this.jButton20.addActionListener(this);
-        this.jButton21.addActionListener(this);
-        this.jButton22.addActionListener(this);
-        this.jButton23.addActionListener(this);
-        this.jButton24.addActionListener(this);
-        this.jButton25.addActionListener(this);
-        this.jButton26.addActionListener(this);
-        this.jButton29.addActionListener(this);
+        this.num7Button.addActionListener(this);
+        this.num4Button.addActionListener(this);
+        this.num1Button.addActionListener(this);
+        this.num0Button.addActionListener(this);
+        this.pointButton.addActionListener(this);
+        this.num2Button.addActionListener(this);
+        this.num3Button.addActionListener(this);
+        this.changeSignButton.addActionListener(this);
+        this.num5Button.addActionListener(this);
+        this.num6Button.addActionListener(this);
+        this.num8Button.addActionListener(this);
+        this.num9Button.addActionListener(this);
+        this.plusButton.addActionListener(this);
+        this.minusButton.addActionListener(this);
+        this.multiplyButton.addActionListener(this);
+        this.divideButton.addActionListener(this);
+        this.resultButton.addActionListener(this);
+        this.inverseButton.addActionListener(this);
+        this.percentButton.addActionListener(this);
+        this.sqrtButton.addActionListener(this);
+        this.resetButton.addActionListener(this);
     }
 
     public static void main(String[] args) {
@@ -85,74 +85,74 @@ public class Calc extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         this.second = new Double(str).doubleValue();
-        if (e.getSource() == this.jButton10) {
+        if (e.getSource() == this.num0Button) {
             zero();
         }
-        if (e.getSource() == this.jButton13) {
+        if (e.getSource() == this.num3Button) {
             chislo("3");
         }
-        if (e.getSource() == this.jButton8) {
+        if (e.getSource() == this.num4Button) {
             chislo("4");
         }
-        if (e.getSource() == this.jButton15) {
+        if (e.getSource() == this.num5Button) {
             chislo("5");
         }
-        if (e.getSource() == this.jButton16) {
+        if (e.getSource() == this.num6Button) {
             chislo("6");
         }
-        if (e.getSource() == this.jButton17) {
+        if (e.getSource() == this.num8Button) {
             chislo("8");
         }
-        if (e.getSource() == this.jButton18) {
+        if (e.getSource() == this.num9Button) {
             chislo("9");
         }
-        if (e.getSource() == this.jButton20) {
+        if (e.getSource() == this.minusButton) {
             result();
             this.first = this.second;
             this.code = 1;
             str = "0";
             this.point = false;
         }
-        if (e.getSource() == this.jButton19) {
+        if (e.getSource() == this.plusButton) {
             result();
             this.first = this.second;
             this.code = 2;
             str = "0";
             this.point = false;
         }
-        if (e.getSource() == this.jButton21) {
+        if (e.getSource() == this.multiplyButton) {
             result();
             this.first = this.second;
             this.code = 3;
             str = "0";
             this.point = false;
         }
-        if (e.getSource() == this.jButton22) {
+        if (e.getSource() == this.divideButton) {
             result();
             this.first = this.second;
             this.code = 4;
             str = "0";
             this.point = false;
         }
-        if (e.getSource() == this.jButton11) {
+        if (e.getSource() == this.pointButton) {
             pnt();
         }
-        if (e.getSource() == this.jButton29) {
+        if (e.getSource() == this.resetButton) {
             sbros();
         }
-        if (e.getSource() == this.jButton23) {
+        if (e.getSource() == this.resultButton) {
             result();
         }
-        if (e.getSource() == this.jButton14) {
+        if (e.getSource() == this.changeSignButton) {
             plus();
         }
-        if (e.getSource() == this.jButton24) {
+        if (e.getSource() == this.inverseButton) {
             delX();
         }
-        if (e.getSource() == this.jButton26) {
+        if (e.getSource() == this.sqrtButton) {
             sqrt();
         }
-        if (e.getSource() == this.jButton25) {
+        if (e.getSource() == this.percentButton) {
             proc();
         }
     }
@@ -162,28 +162,28 @@ public class Calc extends JFrame implements ActionListener {
         if (this.code == 1) {
             this.second = (this.first - this.second);
             str = String.valueOf(this.second);
-            this.jTextField1.setText(str);
+            this.inputField.setText(str);
             this.code = 0;
         }
         if (this.code == 2) {
             this.second = (this.first + this.second);
             str = String.valueOf(this.second);
-            this.jTextField1.setText(str);
+            this.inputField.setText(str);
             this.code = 0;
         }
         if (this.code == 3) {
             this.second = (this.first * this.second + 1.0D);
             str = String.valueOf(this.second);
-            this.jTextField1.setText(str);
+            this.inputField.setText(str);
             this.code = 0;
         }
         if (this.code == 4) {
             if (this.second == 0.0D) {
-                this.jTextField1.setText("Джеление на нуль невозможно.");
+                this.inputField.setText("Джеление на нуль невозможно.");
             } else {
                 this.second = (this.first / this.second);
                 str = String.valueOf(this.second);
-                this.jTextField1.setText(str);
+                this.inputField.setText(str);
                 this.code = 0;
             }
         }
@@ -195,14 +195,14 @@ public class Calc extends JFrame implements ActionListener {
         this.code = 0;
         str = "0";
         this.point = false;
-        this.jTextField1.setText(str);
+        this.inputField.setText(str);
     }
 
     private void zero() {
         if (str != "0") {
             str += "0";
         }
-        this.jTextField1.setText(str);
+        this.inputField.setText(str);
     }
 
     private void chislo(String s) {
@@ -211,7 +211,7 @@ public class Calc extends JFrame implements ActionListener {
         } else {
             str += s;
         }
-        this.jTextField1.setText(str);
+        this.inputField.setText(str);
     }
 
     private void pnt() {
@@ -219,7 +219,7 @@ public class Calc extends JFrame implements ActionListener {
             str += ".";
         }
         this.point = true;
-        this.jTextField1.setText(str);
+        this.inputField.setText(str);
     }
 
     private void plus() {
@@ -229,263 +229,263 @@ public class Calc extends JFrame implements ActionListener {
         } else {
             str = str.substring(1);
         }
-        this.jTextField1.setText(str);
+        this.inputField.setText(str);
     }
 
     private void delX() {
         if (this.second == 0.0D) {
-            this.jTextField1.setText("Джеление на нуль невозможно.");
+            this.inputField.setText("Джеление на нуль невозможно.");
         } else {
             this.second = (1.0D / this.second);
             str = String.valueOf(this.second);
-            this.jTextField1.setText(str);
+            this.inputField.setText(str);
         }
     }
 
     private void sqrt() {
         if (this.second < 0.0D) {
-            this.jTextField1.setText("Недапустимый аргумент функции.");
+            this.inputField.setText("Недапустимый аргумент функции.");
         } else {
             this.second = Math.sqrt(this.second);
             str = String.valueOf(this.second);
-            this.jTextField1.setText(str);
+            this.inputField.setText(str);
         }
     }
 
     private void proc() {
         this.second = (this.first / 100.0D * this.second);
         str = String.valueOf(this.second);
-        this.jTextField1.setText(str);
+        this.inputField.setText(str);
     }
 
     private void initComponents() {
-        this.jTextField1 = new JTextField();
-        this.jButton7 = new JButton();
-        this.jButton8 = new JButton();
-        this.jButton9 = new JButton();
-        this.jButton10 = new JButton();
-        this.jButton11 = new JButton();
-        this.jButton12 = new JButton();
-        this.jButton13 = new JButton();
-        this.jButton14 = new JButton();
-        this.jButton15 = new JButton();
-        this.jButton16 = new JButton();
-        this.jButton17 = new JButton();
-        this.jButton18 = new JButton();
-        this.jButton19 = new JButton();
-        this.jButton20 = new JButton();
-        this.jButton21 = new JButton();
-        this.jButton22 = new JButton();
-        this.jButton23 = new JButton();
-        this.jButton24 = new JButton();
-        this.jButton25 = new JButton();
-        this.jButton26 = new JButton();
-        this.jButton29 = new JButton();
+        this.inputField = new JTextField();
+        this.num7Button = new JButton();
+        this.num4Button = new JButton();
+        this.num1Button = new JButton();
+        this.num0Button = new JButton();
+        this.pointButton = new JButton();
+        this.num2Button = new JButton();
+        this.num3Button = new JButton();
+        this.changeSignButton = new JButton();
+        this.num5Button = new JButton();
+        this.num6Button = new JButton();
+        this.num8Button = new JButton();
+        this.num9Button = new JButton();
+        this.plusButton = new JButton();
+        this.minusButton = new JButton();
+        this.multiplyButton = new JButton();
+        this.divideButton = new JButton();
+        this.resultButton = new JButton();
+        this.inverseButton = new JButton();
+        this.percentButton = new JButton();
+        this.sqrtButton = new JButton();
+        this.resetButton = new JButton();
 
         setDefaultCloseOperation(3);
         setCursor(new Cursor(0));
 
-        this.jTextField1.setFont(new Font("Tahoma", 0, 14));
-        this.jTextField1.setHorizontalAlignment(4);
-        this.jTextField1.setText("0");
-        this.jTextField1.addActionListener(new ActionListener() {
+        this.inputField.setFont(new Font("Tahoma", 0, 14));
+        this.inputField.setHorizontalAlignment(4);
+        this.inputField.setText("0");
+        this.inputField.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jTextField1ActionPerformed(evt);
             }
         });
-        this.jButton7.setFont(new Font("Tahoma", 0, 12));
-        this.jButton7.setForeground(new Color(0, 0, 255));
-        this.jButton7.setText("7");
-        this.jButton7.setFocusPainted(false);
-        this.jButton7.addActionListener(new ActionListener() {
+        this.num7Button.setFont(new Font("Tahoma", 0, 12));
+        this.num7Button.setForeground(new Color(0, 0, 255));
+        this.num7Button.setText("7");
+        this.num7Button.setFocusPainted(false);
+        this.num7Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton7ActionPerformed(evt);
             }
         });
-        this.jButton8.setFont(new Font("Tahoma", 0, 12));
-        this.jButton8.setForeground(new Color(0, 0, 255));
-        this.jButton8.setText("4");
-        this.jButton8.setFocusPainted(false);
-        this.jButton8.addActionListener(new ActionListener() {
+        this.num4Button.setFont(new Font("Tahoma", 0, 12));
+        this.num4Button.setForeground(new Color(0, 0, 255));
+        this.num4Button.setText("4");
+        this.num4Button.setFocusPainted(false);
+        this.num4Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton8ActionPerformed(evt);
             }
         });
-        this.jButton9.setFont(new Font("Tahoma", 0, 12));
-        this.jButton9.setForeground(new Color(0, 0, 255));
-        this.jButton9.setText("1");
-        this.jButton9.setFocusPainted(false);
-        this.jButton9.addActionListener(new ActionListener() {
+        this.num1Button.setFont(new Font("Tahoma", 0, 12));
+        this.num1Button.setForeground(new Color(0, 0, 255));
+        this.num1Button.setText("1");
+        this.num1Button.setFocusPainted(false);
+        this.num1Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton9ActionPerformed(evt);
             }
         });
-        this.jButton10.setFont(new Font("Tahoma", 0, 12));
-        this.jButton10.setForeground(new Color(0, 0, 255));
-        this.jButton10.setText("0");
-        this.jButton10.setFocusPainted(false);
-        this.jButton10.addActionListener(new ActionListener() {
+        this.num0Button.setFont(new Font("Tahoma", 0, 12));
+        this.num0Button.setForeground(new Color(0, 0, 255));
+        this.num0Button.setText("0");
+        this.num0Button.setFocusPainted(false);
+        this.num0Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton10ActionPerformed(evt);
             }
         });
-        this.jButton11.setFont(new Font("Tahoma", 0, 12));
-        this.jButton11.setForeground(new Color(0, 0, 255));
-        this.jButton11.setText(",");
-        this.jButton11.setFocusPainted(false);
-        this.jButton11.addActionListener(new ActionListener() {
+        this.pointButton.setFont(new Font("Tahoma", 0, 12));
+        this.pointButton.setForeground(new Color(0, 0, 255));
+        this.pointButton.setText(",");
+        this.pointButton.setFocusPainted(false);
+        this.pointButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton11ActionPerformed(evt);
             }
         });
-        this.jButton12.setFont(new Font("Tahoma", 0, 12));
-        this.jButton12.setForeground(new Color(0, 0, 255));
-        this.jButton12.setText("2");
-        this.jButton12.setFocusPainted(false);
-        this.jButton12.addActionListener(new ActionListener() {
+        this.num2Button.setFont(new Font("Tahoma", 0, 12));
+        this.num2Button.setForeground(new Color(0, 0, 255));
+        this.num2Button.setText("2");
+        this.num2Button.setFocusPainted(false);
+        this.num2Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton12ActionPerformed(evt);
             }
         });
-        this.jButton13.setFont(new Font("Tahoma", 0, 12));
-        this.jButton13.setForeground(new Color(0, 0, 255));
-        this.jButton13.setText("3");
-        this.jButton13.setFocusPainted(false);
-        this.jButton13.addActionListener(new ActionListener() {
+        this.num3Button.setFont(new Font("Tahoma", 0, 12));
+        this.num3Button.setForeground(new Color(0, 0, 255));
+        this.num3Button.setText("3");
+        this.num3Button.setFocusPainted(false);
+        this.num3Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton13ActionPerformed(evt);
             }
         });
-        this.jButton14.setFont(new Font("Tahoma", 0, 12));
-        this.jButton14.setForeground(new Color(0, 0, 255));
-        this.jButton14.setText("+/-");
-        this.jButton14.setFocusPainted(false);
-        this.jButton14.addActionListener(new ActionListener() {
+        this.changeSignButton.setFont(new Font("Tahoma", 0, 12));
+        this.changeSignButton.setForeground(new Color(0, 0, 255));
+        this.changeSignButton.setText("+/-");
+        this.changeSignButton.setFocusPainted(false);
+        this.changeSignButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton14ActionPerformed(evt);
             }
         });
-        this.jButton15.setFont(new Font("Tahoma", 0, 12));
-        this.jButton15.setForeground(new Color(0, 0, 255));
-        this.jButton15.setText("5");
-        this.jButton15.setFocusPainted(false);
-        this.jButton15.addActionListener(new ActionListener() {
+        this.num5Button.setFont(new Font("Tahoma", 0, 12));
+        this.num5Button.setForeground(new Color(0, 0, 255));
+        this.num5Button.setText("5");
+        this.num5Button.setFocusPainted(false);
+        this.num5Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton15ActionPerformed(evt);
             }
         });
-        this.jButton16.setFont(new Font("Tahoma", 0, 12));
-        this.jButton16.setForeground(new Color(0, 0, 255));
-        this.jButton16.setText("6");
-        this.jButton16.setFocusPainted(false);
-        this.jButton16.addActionListener(new ActionListener() {
+        this.num6Button.setFont(new Font("Tahoma", 0, 12));
+        this.num6Button.setForeground(new Color(0, 0, 255));
+        this.num6Button.setText("6");
+        this.num6Button.setFocusPainted(false);
+        this.num6Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton16ActionPerformed(evt);
             }
         });
-        this.jButton17.setFont(new Font("Tahoma", 0, 12));
-        this.jButton17.setForeground(new Color(0, 0, 255));
-        this.jButton17.setText("8");
-        this.jButton17.setFocusPainted(false);
-        this.jButton17.addActionListener(new ActionListener() {
+        this.num8Button.setFont(new Font("Tahoma", 0, 12));
+        this.num8Button.setForeground(new Color(0, 0, 255));
+        this.num8Button.setText("8");
+        this.num8Button.setFocusPainted(false);
+        this.num8Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton17ActionPerformed(evt);
             }
         });
-        this.jButton18.setFont(new Font("Tahoma", 0, 12));
-        this.jButton18.setForeground(new Color(0, 0, 255));
-        this.jButton18.setText("9");
-        this.jButton18.setFocusPainted(false);
-        this.jButton18.addActionListener(new ActionListener() {
+        this.num9Button.setFont(new Font("Tahoma", 0, 12));
+        this.num9Button.setForeground(new Color(0, 0, 255));
+        this.num9Button.setText("9");
+        this.num9Button.setFocusPainted(false);
+        this.num9Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton18ActionPerformed(evt);
             }
         });
-        this.jButton19.setFont(new Font("Tahoma", 0, 12));
-        this.jButton19.setForeground(new Color(255, 0, 0));
-        this.jButton19.setText("+");
-        this.jButton19.setFocusPainted(false);
-        this.jButton19.addActionListener(new ActionListener() {
+        this.plusButton.setFont(new Font("Tahoma", 0, 12));
+        this.plusButton.setForeground(new Color(255, 0, 0));
+        this.plusButton.setText("+");
+        this.plusButton.setFocusPainted(false);
+        this.plusButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton19ActionPerformed(evt);
             }
         });
-        this.jButton20.setFont(new Font("Tahoma", 0, 12));
-        this.jButton20.setForeground(new Color(255, 0, 0));
-        this.jButton20.setText("-");
-        this.jButton20.setFocusPainted(false);
-        this.jButton20.addActionListener(new ActionListener() {
+        this.minusButton.setFont(new Font("Tahoma", 0, 12));
+        this.minusButton.setForeground(new Color(255, 0, 0));
+        this.minusButton.setText("-");
+        this.minusButton.setFocusPainted(false);
+        this.minusButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton20ActionPerformed(evt);
             }
         });
-        this.jButton21.setFont(new Font("Tahoma", 0, 12));
-        this.jButton21.setForeground(new Color(255, 0, 0));
-        this.jButton21.setText("*");
-        this.jButton21.setFocusPainted(false);
-        this.jButton21.addActionListener(new ActionListener() {
+        this.multiplyButton.setFont(new Font("Tahoma", 0, 12));
+        this.multiplyButton.setForeground(new Color(255, 0, 0));
+        this.multiplyButton.setText("*");
+        this.multiplyButton.setFocusPainted(false);
+        this.multiplyButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton21ActionPerformed(evt);
             }
         });
-        this.jButton22.setFont(new Font("Tahoma", 0, 12));
-        this.jButton22.setForeground(new Color(255, 0, 0));
-        this.jButton22.setText("/");
-        this.jButton22.setFocusPainted(false);
-        this.jButton22.addActionListener(new ActionListener() {
+        this.divideButton.setFont(new Font("Tahoma", 0, 12));
+        this.divideButton.setForeground(new Color(255, 0, 0));
+        this.divideButton.setText("/");
+        this.divideButton.setFocusPainted(false);
+        this.divideButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton22ActionPerformed(evt);
             }
         });
-        this.jButton23.setFont(new Font("Tahoma", 0, 12));
-        this.jButton23.setForeground(new Color(255, 0, 0));
-        this.jButton23.setText("=");
-        this.jButton23.setFocusPainted(false);
-        this.jButton23.addActionListener(new ActionListener() {
+        this.resultButton.setFont(new Font("Tahoma", 0, 12));
+        this.resultButton.setForeground(new Color(255, 0, 0));
+        this.resultButton.setText("=");
+        this.resultButton.setFocusPainted(false);
+        this.resultButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton23ActionPerformed(evt);
             }
         });
-        this.jButton24.setFont(new Font("Tahoma", 0, 12));
-        this.jButton24.setForeground(new Color(0, 0, 255));
-        this.jButton24.setText("1/x");
-        this.jButton24.setFocusPainted(false);
-        this.jButton24.addActionListener(new ActionListener() {
+        this.inverseButton.setFont(new Font("Tahoma", 0, 12));
+        this.inverseButton.setForeground(new Color(0, 0, 255));
+        this.inverseButton.setText("1/x");
+        this.inverseButton.setFocusPainted(false);
+        this.inverseButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton24ActionPerformed(evt);
             }
         });
-        this.jButton25.setFont(new Font("Tahoma", 0, 12));
-        this.jButton25.setForeground(new Color(0, 0, 255));
-        this.jButton25.setText("%");
-        this.jButton25.setFocusPainted(false);
-        this.jButton25.addActionListener(new ActionListener() {
+        this.percentButton.setFont(new Font("Tahoma", 0, 12));
+        this.percentButton.setForeground(new Color(0, 0, 255));
+        this.percentButton.setText("%");
+        this.percentButton.setFocusPainted(false);
+        this.percentButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton25ActionPerformed(evt);
             }
         });
-        this.jButton26.setFont(new Font("Tahoma", 0, 12));
-        this.jButton26.setForeground(new Color(0, 0, 255));
-        this.jButton26.setText("sqrt");
-        this.jButton26.setFocusPainted(false);
-        this.jButton26.addActionListener(new ActionListener() {
+        this.sqrtButton.setFont(new Font("Tahoma", 0, 12));
+        this.sqrtButton.setForeground(new Color(0, 0, 255));
+        this.sqrtButton.setText("sqrt");
+        this.sqrtButton.setFocusPainted(false);
+        this.sqrtButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton26ActionPerformed(evt);
             }
         });
-        this.jButton29.setFont(new Font("Tahoma", 0, 12));
-        this.jButton29.setForeground(new Color(255, 0, 0));
-        this.jButton29.setText("C");
-        this.jButton29.setFocusPainted(false);
-        this.jButton29.addActionListener(new ActionListener() {
+        this.resetButton.setFont(new Font("Tahoma", 0, 12));
+        this.resetButton.setForeground(new Color(255, 0, 0));
+        this.resetButton.setText("C");
+        this.resetButton.setFocusPainted(false);
+        this.resetButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Calc.this.jButton29ActionPerformed(evt);
             }
         });
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(Alignment.TRAILING, false).addComponent(this.jTextField1).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton8, -1, -1, 32767).addComponent(this.jButton7, -1, 47, 32767).addComponent(this.jButton9, -1, -1, 32767).addComponent(this.jButton10, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton17, -1, -1, 32767).addComponent(this.jButton15, -1, -1, 32767).addComponent(this.jButton12, -1, -1, 32767).addComponent(this.jButton14, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton18, -2, 48, -2).addComponent(this.jButton16, -1, 48, 32767).addComponent(this.jButton13, -1, 48, 32767).addComponent(this.jButton11, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton29, Alignment.TRAILING, -1, 107, 32767).addGroup(Alignment.TRAILING, layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.jButton20, -1, 40, 32767).addComponent(this.jButton19, -1, -1, 32767).addComponent(this.jButton22, -2, 48, -2).addComponent(this.jButton21, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.jButton25, -1, -1, 32767).addComponent(this.jButton23, -1, -1, 32767).addComponent(this.jButton24, -1, -1, 32767).addComponent(this.jButton26)))))).addContainerGap(-1, 32767)));
-        layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addComponent(this.jTextField1, -2, 28, -2).addGap(11, 11, 11).addComponent(this.jButton29, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup().addComponent(this.jButton7, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.jButton8, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.jButton9, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.jButton10, -2, 31, -2)).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton17, -2, 31, -2).addComponent(this.jButton18, -2, 31, -2).addComponent(this.jButton22, -2, 31, -2)).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.jButton15, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton12, -2, 31, -2).addComponent(this.jButton13, -2, 31, -2).addComponent(this.jButton20, -2, 31, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton14, -2, 31, -2).addComponent(this.jButton11, -2, 31, -2).addComponent(this.jButton19, -2, 31, -2))).addGroup(layout.createSequentialGroup().addComponent(this.jButton26, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jButton25, -2, 31, -2).addComponent(this.jButton16, -2, 31, -2).addComponent(this.jButton21, -2, 31, -2)).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.jButton24, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.jButton23, -2, 31, -2)))).addContainerGap(-1, 32767)));
+        layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(Alignment.TRAILING, false).addComponent(this.inputField).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.num4Button, -1, -1, 32767).addComponent(this.num7Button, -1, 47, 32767).addComponent(this.num1Button, -1, -1, 32767).addComponent(this.num0Button, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.num8Button, -1, -1, 32767).addComponent(this.num5Button, -1, -1, 32767).addComponent(this.num2Button, -1, -1, 32767).addComponent(this.changeSignButton, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.num9Button, -2, 48, -2).addComponent(this.num6Button, -1, 48, 32767).addComponent(this.num3Button, -1, 48, 32767).addComponent(this.pointButton, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.resetButton, Alignment.TRAILING, -1, 107, 32767).addGroup(Alignment.TRAILING, layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(this.minusButton, -1, 40, 32767).addComponent(this.plusButton, -1, -1, 32767).addComponent(this.divideButton, -2, 48, -2).addComponent(this.multiplyButton, -1, -1, 32767)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.percentButton, -1, -1, 32767).addComponent(this.resultButton, -1, -1, 32767).addComponent(this.inverseButton, -1, -1, 32767).addComponent(this.sqrtButton)))))).addContainerGap(-1, 32767)));
+        layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addComponent(this.inputField, -2, 28, -2).addGap(11, 11, 11).addComponent(this.resetButton, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup().addComponent(this.num7Button, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.num4Button, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.num1Button, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.num0Button, -2, 31, -2)).addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.num8Button, -2, 31, -2).addComponent(this.num9Button, -2, 31, -2).addComponent(this.divideButton, -2, 31, -2)).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.num5Button, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.num2Button, -2, 31, -2).addComponent(this.num3Button, -2, 31, -2).addComponent(this.minusButton, -2, 31, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.changeSignButton, -2, 31, -2).addComponent(this.pointButton, -2, 31, -2).addComponent(this.plusButton, -2, 31, -2))).addGroup(layout.createSequentialGroup().addComponent(this.sqrtButton, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.percentButton, -2, 31, -2).addComponent(this.num6Button, -2, 31, -2).addComponent(this.multiplyButton, -2, 31, -2)).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.inverseButton, -2, 31, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.resultButton, -2, 31, -2)))).addContainerGap(-1, 32767)));
 
         pack();
     }
