@@ -172,7 +172,7 @@ public class Calc extends JFrame implements ActionListener {
             this.code = 0;
         }
         if (this.code == 3) {
-            this.second = (this.first * this.second + 1.0D);
+            this.second = (this.first * this.second);
             str = String.valueOf(this.second);
             this.inputField.setText(str);
             this.code = 0;
