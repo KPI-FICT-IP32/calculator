@@ -14,10 +14,11 @@ import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class Calc extends JFrame implements ActionListener {
+
     static String str;
     double second;
     double first;
-    int code;
+    Operation operation;
     boolean point;
     double plus;
     private JButton num0Button;
@@ -42,13 +43,12 @@ public class Calc extends JFrame implements ActionListener {
     private JButton num4Button;
     private JButton num1Button;
     private JTextField inputField;
-
     public Calc() {
         initComponents();
 
         this.second = 0.0D;
         this.first = 0.0D;
-        this.code = 0;
+        this.operation = Operation.NOOP;
         str = "0";
         this.point = false;
 
@@ -109,28 +109,28 @@ public class Calc extends JFrame implements ActionListener {
         if (e.getSource() == this.minusButton) {
             result();
             this.first = this.second;
-            this.code = 1;
+            this.operation = Operation.SUBTRACTION;
             str = "0";
             this.point = false;
         }
         if (e.getSource() == this.plusButton) {
             result();
             this.first = this.second;
-            this.code = 2;
+            this.operation = Operation.ADDITION;
             str = "0";
             this.point = false;
         }
         if (e.getSource() == this.multiplyButton) {
             result();
             this.first = this.second;
-            this.code = 3;
+            this.operation = Operation.MULTIPLICATION;
             str = "0";
             this.point = false;
         }
         if (e.getSource() == this.divideButton) {
             result();
             this.first = this.second;
-            this.code = 4;
+            this.operation = Operation.DIVISION;
             str = "0";
             this.point = false;
         }
@@ -159,40 +159,44 @@ public class Calc extends JFrame implements ActionListener {
 
     private void result() {
         this.second = new Double(str).doubleValue();
-        if (this.code == 1) {
-            this.second = (this.first - this.second);
-            str = String.valueOf(this.second);
-            this.inputField.setText(str);
-            this.code = 0;
-        }
-        if (this.code == 2) {
-            this.second = (this.first + this.second);
-            str = String.valueOf(this.second);
-            this.inputField.setText(str);
-            this.code = 0;
-        }
-        if (this.code == 3) {
-            this.second = (this.first * this.second);
-            str = String.valueOf(this.second);
-            this.inputField.setText(str);
-            this.code = 0;
-        }
-        if (this.code == 4) {
-            if (this.second == 0.0D) {
-                this.inputField.setText("Джеление на нуль невозможно.");
-            } else {
-                this.second = (this.first / this.second);
+        switch (this.operation) {
+            case SUBTRACTION:
+                this.second = this.first - this.second;
                 str = String.valueOf(this.second);
                 this.inputField.setText(str);
-                this.code = 0;
-            }
+                this.operation = Operation.NOOP;
+                break;
+            case ADDITION:
+                this.second = this.first + this.second;
+                str = String.valueOf(this.second);
+                this.inputField.setText(str);
+                this.operation = Operation.NOOP;
+                break;
+            case MULTIPLICATION:
+                this.second = this.first * this.second;
+                str = String.valueOf(this.second);
+                this.inputField.setText(str);
+                this.operation = Operation.NOOP;
+                break;
+            case DIVISION:
+                if (this.second == 0.0D) {
+                    this.inputField.setText("Джеление на нуль невозможно.");
+                } else {
+                    this.second = (this.first / this.second);
+                    str = String.valueOf(this.second);
+                    this.inputField.setText(str);
+                    this.operation = Operation.NOOP;
+                }
+                break;
+            default:
+                // Do nothing
         }
     }
 
     private void sbros() {
         this.second = 0.0D;
         this.first = 0.0D;
-        this.code = 0;
+        this.operation = Operation.NOOP;
         str = "0";
         this.point = false;
         this.inputField.setText(str);
@@ -556,5 +560,11 @@ public class Calc extends JFrame implements ActionListener {
     }
 
     private void jTextField1ActionPerformed(ActionEvent evt) {
+    }
+
+    static enum Operation {
+        NOOP,
+        ADDITION, SUBTRACTION,
+        MULTIPLICATION, DIVISION,
     }
 }
