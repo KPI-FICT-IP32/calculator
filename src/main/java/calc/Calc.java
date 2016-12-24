@@ -138,7 +138,7 @@ public class Calc extends JFrame {
 
     private void divideByX() {
         if (this.second == 0.0D) {
-            this.inputField.setText("Джеление на нуль невозможно.");
+            this.inputField.setText("Деление на ноль невозможно.");
         } else {
             this.second = (1.0D / this.second);
             str = String.valueOf(this.second);
@@ -148,7 +148,7 @@ public class Calc extends JFrame {
 
     private void sqrt() {
         if (this.second < 0.0D) {
-            this.inputField.setText("Недапустимый аргумент функции.");
+            this.inputField.setText("Недопустимый аргумент функции.");
         } else {
             this.second = Math.sqrt(this.second);
             str = String.valueOf(this.second);
