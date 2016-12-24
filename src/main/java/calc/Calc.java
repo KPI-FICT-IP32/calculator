@@ -127,10 +127,10 @@ public class Calc extends JFrame {
     }
 
     private void changeSign() {
-        double plus = Double.parseDouble(str);
-        if (plus > 0.0D) {
+        double operand = Double.parseDouble(str);
+        if (operand > 0.0D) {
             str = "-" + str;
-        } else {
+        } else if (str.startsWith("-")) {
             str = str.substring(1);
         }
         this.inputField.setText(str);
